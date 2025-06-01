@@ -7,7 +7,7 @@ $host = 'aws-0-ap-southeast-1.pooler.supabase.com';
 $port = '6543';
 $dbname = 'postgres';
 $user = 'postgres.zemhidfkcpsqaokpujkr';
-$password = '你的密码'; // ⚠️ 替换成你自己的
+$password = '@Fuhai199771'; 
 
 $conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
 if (!$conn) {
