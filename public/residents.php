@@ -1,4 +1,5 @@
 <?php
+header("Access-Control-Allow-Origin: *");
 // Supabase connection info
 $host = 'aws-0-ap-southeast-1.pooler.supabase.com';
 $port = '6543';
