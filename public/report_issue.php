@@ -16,9 +16,9 @@ if (!$conn) {
 }
 
 $data = json_decode(file_get_contents("php://input"), true);
-$name = trim($data["name"]);
-$unit = trim($data["unit"]);
-$message = trim($data["message"]);
+$name = isset($data["name"]) ? trim($data["name"]) : "";
+$unit = isset($data["unit"]) ? trim($data["unit"]) : "";
+$message = isset($data["message"]) ? trim($data["message"]) : "";
 
 $query = "INSERT INTO maintenance (name, unit_number, message, created_at) VALUES ($1, $2, $3, NOW())";
 $result = pg_query_params($conn, $query, [$name, $unit, $message]);
